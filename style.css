@@ -150,7 +150,7 @@ nav ul li a {
 .burger div {
  width : 20px ;
  height : 3px ;
- background-color : var(--primary-text) ;
+ background-color : peru ;
  margin  : 5px ;
  transition : all 0.3s ease ;
 }
@@ -549,6 +549,32 @@ footer .pair .footerbutton:hover {
     #services {
 	font-size: 20px;
     }
+
+    .contact-container {
+    flex-direction: column;
+    }
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .7rem ;
+}
+
+
+.project-name {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    padding: .9rem;
+}
+
+.project-description {
+    padding: .9rem;
+    margin: 0 ;
+    text-align: left;
+    margin-bottom: .9rem;
+}
 
     .description,#contact {
         font-size: 20px;
