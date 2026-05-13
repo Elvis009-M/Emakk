@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMAKK Solutions | Case Studies</title> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+   <header id="main-header">
+        <nav class="container nav-container">
+            <a href="index.html" class="brand-wrapper">
+                <img src="assets/emakk_logo.webp" alt="EMAKK" class="brand-logo">
+                <div class="brand-text">EMAKK<span>Solutions</span></div>
+                <div class="brand-text">THE  <span> GALLERY</span></div>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Main Page</a></li>
+                    <li><a href="https://wa.me/233534194975?text=Hi%20EMAKK%20Solutions,%20I'm%20interested%20in%20discussing%20a%20project.">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle Theme">☀️</button>
+                    <a href="#contact" class="cta">Start Project 🚀</a>
+                </div>
+            </div>
+
+            <button class="hamburger" id="menu-toggle" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="badge">Case Studies</span> <br> <br> <br>
+            <h2 class="brand-text">THE <span>GALLERY</span></h2>
+        </div>
+
+  <!-- SEARCH BAR -->
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Search projects..." 
+    onkeyup="searchProjects()"
+  />
+
+  <div id="filters">
+  <button onclick="filterProjects('All')">All</button>
+  <button onclick="filterProjects('Web Development')">Web</button>
+  <button onclick="filterProjects('App Development')">Apps</button>
+  <button onclick="filterProjects('System Development')">Systems</button>
+</div>
+
+  <!-- PROJECT GRID -->
+  <div id="projectContainer" class="project-grid"></div>
+
+
+<!-- CASE STUDY MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content animate">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2 id="m-title"></h2>
+
+    <p><strong>Problem:</strong> <span id="m-problem"></span></p>
+    <p><strong>Solution:</strong> <span id="m-solution"></span></p>
+    <p><strong>Results:</strong> <span id="m-results"></span></p>
+    <p><strong>Tech Stack:</strong> <span id="m-tech"></span></p>
+
+    <a id="m-live" target="_blank">🌐 View Live Project</a>
+
+    <div class="cta-box">
+      <p style="margin-bottom: .3rem;">Want a similar solution for your business?</p>
+      <a href="https://wa.me/233534194975?text=Hi%20EMAKK%20Solutions,%20I'm%20interested%20in%20discussing%20a%20project." class="cta">Start Your Project 🚀</a>
+    </div>
+
+  </div>
+</div>
+
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <div class="brand-text">EMAKK<span>Solutions</span></div>
+            <p>A professional digital solutions brand focused on building websites, apps, and systems that solve problems, improve efficiency and help businesses grow online.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Elvis009-M" aria-label="GitHub">
+                                                <div style="color:currentColor; display: inline; margin: 7px;">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       width="24"
+       height="24"
+       viewBox="0 0 24 24"
+       fill="currentColor">
+    <path d="M12 .5C5.65.5.5 5.65.5 12
+             c0 5.09 3.29 9.41 7.86 10.94
+             .58.11.79-.25.79-.56
+             0-.28-.01-1.02-.02-2
+             -3.2.69-3.88-1.54-3.88-1.54
+             -.52-1.32-1.28-1.67-1.28-1.67
+             -1.04-.71.08-.69.08-.69
+             1.15.08 1.75 1.18 1.75 1.18
+             1.02 1.75 2.67 1.24 3.32.95
+             .1-.74.4-1.24.72-1.53
+             -2.55-.29-5.23-1.28-5.23-5.7
+             0-1.26.45-2.3 1.18-3.11
+             -.12-.29-.51-1.47.11-3.06
+             0 0 .97-.31 3.19 1.19
+             .92-.26 1.91-.39 2.89-.39
+             .98 0 1.97.13 2.89.39
+             2.22-1.5 3.19-1.19 3.19-1.19
+             .62 1.59.23 2.77.11 3.06
+             .73.81 1.18 1.85 1.18 3.11
+             0 4.43-2.69 5.4-5.25 5.69
+             .41.35.77 1.04.77 2.1
+             0 1.52-.01 2.74-.01 3.11
+             0 .31.21.68.8.56A11.51 
+             11.51 0 0 0 23.5 12
+             C23.5 5.65 18.35.5 12 .5z"/>
+  </svg>
+</div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kreave" aria-label="LinkedIn">
+                                                <div style="color:#0A66C2; display: inline; margin: 7px;">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="currentColor">
+                            <path d="M4.98 3.5C4.98 4.88 3.86 6 
+                                    2.48 6S0 4.88 0 3.5 
+                                    1.12 1 2.48 1 4.98 2.12 
+                                    4.98 3.5zM.5 8h4V24h-4V8zm7.5 
+                                    0h3.8v2.2h.1c.5-.9 1.8-2.2 
+                                    3.8-2.2 4 0 4.8 2.6 
+                                    4.8 6V24h-4v-7.1c0-1.7 
+                                    0-3.9-2.4-3.9s-2.8 
+                                    1.9-2.8 3.8V24h-4V8z"/>
+                        </svg>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/a.k_elvisc0?igsh=MzNlNGNkZWQ4Mg==" aria-label="Instagram">
+                        <div style="color:#E1306C; display: inline;">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37a4 4 0 1 1-7.75 1.26 
+                                    4 4 0 0 1 7.75-1.26z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                        </div>
+                    </a>
+            </div>
+        </div>
+        
+        <div class="footer-nav">
+            <h4>Sitemap</h4>
+            <nav>
+                <a href="index.html">Main Page</a><br>
+                <a href="index.html">About</a> <br>
+                <a href="mailto:emakksolutions@gmail.com">Contact</a>
+            </nav>
+        </div>
+
+        <div class="footer-services">
+            <h4>Solutions/ Projects</h4>
+            <ul>
+                <li>Custom Websites</li>
+                <li>Web Apps</li>
+                <li>API Development</li>
+                <li>SEO Optimization</li>
+            </ul>
+        </div>
+
+        <div class="footer-cta-col">
+            <h4>Next Step</h4>
+            <p>Ready to turn your idea into a website, web app or system that actually grows your business—what are you looking to build?</p>
+            <a href="mailto:emakksolutions@gmail.com" class="btn-primary">Send Message</a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; 2025 EMAKK Solutions. Engineering with Precision.</p>
+        </div>
+    </div>
+</footer>
+
+<div class="fab-container">
+    <button id="scrollToTop" class="fab fab-top" aria-label="Scroll to Top">
+        <span class="fab-icon">↑</span>
+        <span class="fab-label">Back to top</span>
+    </button>
+
+
+    <a href="https://wa.me/233534194975?text=Hi%20EMAKK%20Solutions,%20I'm%20interested%20in%20discussing%20a%20project." 
+       class="fab fab-whatsapp" 
+       target="_blank" 
+       rel="noopener">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="" width="20" height="20">
+        <span class="fab-label">Quick Chat</span>
+    </a>
+</div>
+
+<script src="projects_data.js"></script>
+</body>
+</html>
